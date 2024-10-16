@@ -1,0 +1,183 @@
+body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #6A5ACD 0%, #4169E1 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+    }
+    .container {
+        width: 95%;
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 10px;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+        position: relative;
+    }
+    header {
+        background-color: #4169E1;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    #app {
+        padding: 20px;
+    }
+    h1, h2 {
+        color: #4169E1;
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    #class-form, #student-form, #bulk-add-form {
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #F0F8FF;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    #class-form input, #student-form input, #year-input, #bulk-students, #pdf-name, #pdf-color, #pdf-font {
+        flex-grow: 1;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #4169E1;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        margin-right: 10px;
+    }
+    #class-form button, #student-form button, #bulk-add-form button, #download-form button {
+        padding: 12px 20px;
+        font-size: 16px;
+        background-color: #4169E1;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #student-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+    #student-table th, #student-table td {
+        background-color: #F0F8FF;
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #E1E8ED;
+    }
+    #student-table th {
+        background-color: #4169E1;
+        color: white;
+        font-weight: 600;
+    }
+    .interrogation-cell {
+        display: flex;
+        justify-content: space-between;
+    }
+    .interrogation-box {
+        width: 30px;
+        height: 30px;
+        border: 2px solid #4169E1;
+        display: inline-block;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+    }
+    .homework-input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #E1E8ED;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    #download-form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #F0F8FF;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    #bulk-students {
+        height: 100px;
+        resize: vertical;
+    }
+    .education-illustration {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 100px;
+        height: 100px;
+        opacity: 0.2;
+    }
+    #pdf-preview {
+        display: none;
+        margin-top: 20px;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    .education-illustration {
+        animation: float 3s ease-in-out infinite;
+    }
+    @media screen and (max-width: 768px) {
+        .container {
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+        
+        #app {
+            padding: 10px;
+        }
+        
+        #class-form, #student-form, #bulk-add-form {
+            flex-direction: column;
+        }
+        
+        #class-form input, #student-form input, #year-input, #bulk-students, #class-form button, #student-form button, #bulk-add-form button {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        
+        #student-table {
+            font-size: 14px;
+        }
+        
+        #student-table th, #student-table td {
+            padding: 8px;
+        }
+        
+        .interrogation-box {
+            width: 100%;
+            height: 40px;
+        }
+        
+        #download-form input, #download-pdf {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px;
+        }
+    }
